@@ -1,0 +1,83 @@
+/* 全体の基本スタイル */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  header {
+    background: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2rem;
+  }
+  
+  main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 0 1rem;
+    justify-content: center;
+  }
+  
+  /* 各データセットのカードスタイル */
+  .data-item {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 1rem;
+    text-align: left;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .data-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .data-item h2 {
+    color: #4CAF50;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .data-item p {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+  }
+  
+  /* ボタンのスタイル */
+  button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background: #45A049;
+  }
+  
+  button:active {
+    background: #3E8E41;
+  }
+  
+  button:focus {
+    outline: none;
+  }
