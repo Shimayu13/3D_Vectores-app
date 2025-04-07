@@ -10,6 +10,16 @@
       localStorage.setItem('selectedCSV', fileName);
       window.location.href = './animation/visualization.html'; // 可視化ページに遷移
     }
+    
+    // CSVファイルをダウンロード
+    function downloadCSV(fileName) {
+      const link = document.createElement('a');
+      link.href = fileName;
+      link.download = fileName.split('/').pop();
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
   </script>
 </head>
 <body>
@@ -24,7 +34,10 @@
       <p><strong>路線:</strong> ???</p>
       <p><strong>区間:</strong> ???</p>
       <p><strong>号車:</strong> ???</p>
-      <button onclick="selectCSV('data/vectors.csv')">データを表示</button>
+      <div class="action-buttons">
+        <button onclick="selectCSV('data/vectors.csv')">データを表示</button>
+        <button class="download-btn" onclick="downloadCSV('data/vectors.csv')">CSVダウンロード</button>
+      </div>
     </div>
     <div class="data-item">
       <h2>データセット2</h2>
@@ -33,7 +46,10 @@
       <p><strong>路線:</strong> 東海道線</p>
       <p><strong>区間:</strong> 大船→藤沢</p>
       <p><strong>号車:</strong> 15号車</p>
-      <button onclick="selectCSV('data/Acceleration with g 2024-11-16 08-37-57.csv')">データを表示</button>
+      <div class="action-buttons">
+        <button onclick="selectCSV('data/Acceleration with g 2024-11-16 08-37-57.csv')">データを表示</button>
+        <button class="download-btn" onclick="downloadCSV('data/Acceleration with g 2024-11-16 08-37-57.csv')">CSVダウンロード</button>
+      </div>
     </div>
     <div class="data-item">
       <h2>データセット3</h2>
@@ -42,7 +58,10 @@
       <p><strong>路線:</strong> 西武池袋線</p>
       <p><strong>区間:</strong> 東長崎→江古田</p>
       <p><strong>号車:</strong> 7号車</p>
-      <button onclick="selectCSV('data/Raw Data.csv')">データを表示</button>
+      <div class="action-buttons">
+        <button onclick="selectCSV('data/Raw Data.csv')">データを表示</button>
+        <button class="download-btn" onclick="downloadCSV('data/Raw Data.csv')">CSVダウンロード</button>
+      </div>
     </div>
     <div class="data-item">
       <h2>データセット4</h2>
@@ -51,7 +70,10 @@
       <p><strong>路線:</strong> JR横浜線</p>
       <p><strong>区間:</strong> 古淵→淵野辺</p>
       <p><strong>号車:</strong> 8号車</p>
-      <button onclick="selectCSV('data/g 2024-12-03 14-42-23.csv')">データを表示</button>
+      <div class="action-buttons">
+        <button onclick="selectCSV('data/g 2024-12-03 14-42-23.csv')">データを表示</button>
+        <button class="download-btn" onclick="downloadCSV('data/g 2024-12-03 14-42-23.csv')">CSVダウンロード</button>
+      </div>
     </div>
     <div class="data-item">
       <h2>データセット5</h2>
@@ -60,7 +82,10 @@
       <p><strong>路線:</strong> JR横浜線</p>
       <p><strong>区間:</strong> 町田→淵野辺</p>
       <p><strong>号車:</strong> 1号車</p>
-      <button onclick="selectCSV('data/g 2024-12-06 10-43-37.csv')">データを表示</button>
+      <div class="action-buttons">
+        <button onclick="selectCSV('data/g 2024-12-06 10-43-37.csv')">データを表示</button>
+        <button class="download-btn" onclick="downloadCSV('data/g 2024-12-06 10-43-37.csv')">CSVダウンロード</button>
+      </div>
     </div>
     <div class="data-item">
       <h2>データセット6</h2>
@@ -69,7 +94,10 @@
       <p><strong>路線:</strong> JR横浜線</p>
       <p><strong>区間:</strong> 町田→淵野辺</p>
       <p><strong>号車:</strong> 7号車</p>
-      <button onclick="selectCSV('data/Accelerometer_1.csv')">データを表示</button>
+      <div class="action-buttons">
+        <button onclick="selectCSV('data/Accelerometer_1.csv')">データを表示</button>
+        <button class="download-btn" onclick="downloadCSV('data/Accelerometer_1.csv')">CSVダウンロード</button>
+      </div>
     </div>
     <div class="data-item">
       <h2>データセット7</h2>
@@ -78,7 +106,10 @@
       <p><strong>路線:</strong> JR横須賀線</p>
       <p><strong>区間:</strong> 戸塚→横浜</p>
       <p><strong>号車:</strong> 15号車</p>
-      <button onclick="selectCSV('data/2024-12-19 21-24-22.csv')">データを表示</button>
+      <div class="action-buttons">
+        <button onclick="selectCSV('data/2024-12-19 21-24-22.csv')">データを表示</button>
+        <button class="download-btn" onclick="downloadCSV('data/2024-12-19 21-24-22.csv')">CSVダウンロード</button>
+      </div>
     </div>
     <div class="data-item">
       <h2>データセット8</h2>
@@ -87,7 +118,10 @@
       <p><strong>路線:</strong> JR横浜線</p>
       <p><strong>区間:</strong> 横浜→淵野辺</p>
       <p><strong>号車:</strong> 2号車</p>
-      <button onclick="selectCSV('data/Accelerometer_2.csv')">データを表示</button>
+      <div class="action-buttons">
+        <button onclick="selectCSV('data/Accelerometer_2.csv')">データを表示</button>
+        <button class="download-btn" onclick="downloadCSV('data/Accelerometer_2.csv')">CSVダウンロード</button>
+      </div>
     </div>
     <div class="data-item">
       <h2>データセット9</h2>
@@ -96,7 +130,10 @@
       <p><strong>路線:</strong> JR横浜線</p>
       <p><strong>区間:</strong> 淵野辺→町田</p>
       <p><strong>号車:</strong> 3号車2番ドア</p>
-      <button onclick="selectCSV('data/Accelerometer_3.csv')">データを表示</button>
+      <div class="action-buttons">
+        <button onclick="selectCSV('data/Accelerometer_3.csv')">データを表示</button>
+        <button class="download-btn" onclick="downloadCSV('data/Accelerometer_3.csv')">CSVダウンロード</button>
+      </div>
     </div>
     <div class="data-item">
       <h2>データセット10</h2>
@@ -105,7 +142,10 @@
       <p><strong>路線:</strong> JR横須賀・総武快速線</p>
       <p><strong>区間:</strong> 戸塚→錦糸町</p>
       <p><strong>号車:</strong> 4号車2階</p>
-      <button onclick="selectCSV('data/Accelerometer_4.csv')">データを表示</button>
+      <div class="action-buttons">
+        <button onclick="selectCSV('data/Accelerometer_4.csv')">データを表示</button>
+        <button class="download-btn" onclick="downloadCSV('data/Accelerometer_4.csv')">CSVダウンロード</button>
+      </div>
     </div>
     <div class="data-item">
       <h2>データセット11</h2>
@@ -114,7 +154,10 @@
       <p><strong>路線:</strong> JR東海道線_湘南新宿ライン</p>
       <p><strong>区間:</strong> 小田原→横浜</p>
       <p><strong>号車:</strong> 15号車2-3番ドア</p>
-      <button onclick="selectCSV('data/Accelerometer_5.csv')">データを表示</button>
+      <div class="action-buttons">
+        <button onclick="selectCSV('data/Accelerometer_5.csv')">データを表示</button>
+        <button class="download-btn" onclick="downloadCSV('data/Accelerometer_5.csv')">CSVダウンロード</button>
+      </div>
     </div>
     <div class="data-item">
       <h2>データセット12</h2>
@@ -123,7 +166,10 @@
       <p><strong>路線:</strong> JR東海道線</p>
       <p><strong>区間:</strong> 戸塚→藤沢</p>
       <p><strong>号車:</strong> 15号車1-2番ドア</p>
-      <button onclick="selectCSV('data/Accelerometer_6.csv')">データを表示</button>
+      <div class="action-buttons">
+        <button onclick="selectCSV('data/Accelerometer_6.csv')">データを表示</button>
+        <button class="download-btn" onclick="downloadCSV('data/Accelerometer_6.csv')">CSVダウンロード</button>
+      </div>
     </div>
     <div class="data-item">
       <h2>データセット13</h2>
@@ -132,7 +178,10 @@
       <p><strong>路線:</strong> JR横須賀線</p>
       <p><strong>区間:</strong> 横浜→戸塚</p>
       <p><strong>号車:</strong> 15号車2-3番ドア</p>
-      <button onclick="selectCSV('data/Accelerometer_7.csv')">データを表示</button>
+      <div class="action-buttons">
+        <button onclick="selectCSV('data/Accelerometer_7.csv')">データを表示</button>
+        <button class="download-btn" onclick="downloadCSV('data/Accelerometer_7.csv')">CSVダウンロード</button>
+      </div>
     </div>
     <div class="data-item">
       <h2>データセット14</h2>
@@ -141,7 +190,10 @@
       <p><strong>路線:</strong> JR横浜線</p>
       <p><strong>区間:</strong> 町田→相模原</p>
       <p><strong>号車:</strong> 2号車3-4番ドア</p>
-      <button onclick="selectCSV('data/Accelerometer_8.csv')">データを表示</button>
+      <div class="action-buttons">
+        <button onclick="selectCSV('data/Accelerometer_8.csv')">データを表示</button>
+        <button class="download-btn" onclick="downloadCSV('data/Accelerometer_8.csv')">CSVダウンロード</button>
+      </div>
     </div>
     <div class="data-item">
       <h2>データセット15</h2>
@@ -150,7 +202,10 @@
       <p><strong>路線:</strong> JR横須賀線_湘南新宿ライン</p>
       <p><strong>区間:</strong> 横浜→戸塚</p>
       <p><strong>号車:</strong> 15号車3-4番ドア</p>
-      <button onclick="selectCSV('data/Accelerometer_9.csv')">データを表示</button>
+      <div class="action-buttons">
+        <button onclick="selectCSV('data/Accelerometer_9.csv')">データを表示</button>
+        <button class="download-btn" onclick="downloadCSV('data/Accelerometer_9.csv')">CSVダウンロード</button>
+      </div>
     </div>
   </main>
 </body>

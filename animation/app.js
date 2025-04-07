@@ -39,7 +39,7 @@ if (!selectedCSV) {
       // CSVデータをパース
       vectors = data.split('\n').map(line => {
         const [t, x, y, z] = line.split(',').map(Number);
-        return { t, vector: new THREE.Vector3(x, y, z-9.8) };
+        return { t, vector: new THREE.Vector3(x, y, z) };
       });
 
       // 最初のベクトルを表示

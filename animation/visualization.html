@@ -5,16 +5,30 @@
 <head>
   <meta charset="UTF-8">
   <title>Three.js Vector Visualization with CSV</title>
+  <link rel="stylesheet" href="../style.css">
   <style>
     body { margin: 0; }
     canvas { display: block; }
-    #vector-info { position: absolute; top: 10px; left: 10px; color: white; background: rgba(0, 0, 0, 0.5); padding: 10px; }
+    #vector-info { 
+      position: absolute; 
+      top: 10px; 
+      left: 10px; 
+      color: white; 
+      background: rgba(0, 0, 0, 0.5); 
+      padding: 10px;
+      border-radius: 4px;
+    }
   </style>
 </head>
 <body>
   <div id="vector-info"></div>
+  
+  <div class="visualization-controls">
+    <button id="download-csv-btn" class="download-csv-btn">CSVダウンロード</button>
+    <button id="return-btn" class="return-btn">トップページに戻る</button>
+  </div>
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
-
